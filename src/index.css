@@ -1,0 +1,51 @@
+@import '@fontsource/barlow/400.css';
+@import '@fontsource/barlow/500.css';
+@import '@fontsource/barlow-condensed/600.css';
+@import '@fontsource/barlow-condensed/700.css';
+@import '@fontsource/barlow-condensed/800.css';
+@import '@fontsource/bodoni-moda/400-italic.css';
+@import 'lenis/dist/lenis.css';
+@import 'tailwindcss';
+
+/* Palette is lifted from the Yuzu + Ginger label art (label/label.html). */
+@theme {
+  --font-display: 'Barlow Condensed', 'Avenir Next Condensed', 'Arial Narrow', sans-serif;
+  --font-sans: 'Barlow', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif;
+
+  --color-teal: #0f3f49;
+  --color-teal-deep: #0a2e37;
+  --color-yuzu: #f2b705;
+  --color-ginger: #e8622a;
+  --color-burnt: #b9461a;
+  --color-cream: #f6eedc;
+  --color-mist: #d6e5e1;
+  --color-stone: #b8a795;
+}
+
+html {
+  background: var(--color-yuzu);
+  color: var(--color-teal);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  /* The 3D frame loop eases this between section colours. */
+  background-color: var(--color-yuzu);
+}
+
+::selection {
+  background: var(--color-teal);
+  color: var(--color-yuzu);
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* The label's ZEPHYR sits on an offset ginger shadow; the hero wordmark repeats it. */
+.wordmark-shadow {
+  text-shadow: 0.03em 0.035em 0 var(--color-ginger);
+}
